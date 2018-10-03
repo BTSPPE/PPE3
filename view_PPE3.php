@@ -32,7 +32,7 @@
     </head>
     
 <header> 
-<nav><table><tr><div id=bandeau><td><a href="Acceuil.html">Acceuil</a></td>    <td><a href="Offre.html">Offres</a></td>     <td><a href="Demande.html">Demandes</a></td>       <td><a href="Profil.html">Mon Profil</a></td></div></tr></table></nav>
+<nav><table><tr><div id=bandeau><td><a href="Acceuil.php">Acceuil</a></td>    <td><a href="Offre.php">Offres</a></td>     <td><a href="Demande.html">Demandes</a></td>       <td><a href="Profil.html">Mon Profil</a></td></div></tr></table></nav>
 </header>
     <br><br><br><br><br>
     <body>
