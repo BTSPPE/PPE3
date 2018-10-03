@@ -2,7 +2,7 @@
 <html>
     <head> <meta charset="utf-8">
         <title>Acceuil</title>
-        <link rel="stylesheet" href="Bootstrap/css/Bootstrap.css" />
+        <link rel="stylesheet" href="styleA.css" />
         <link href="https://fonts.googleapis.com/css?family=Bellefair|Open+Sans:400,400i,600i,700" rel="stylesheet">
         
     <script type="text/javascript" src="jquery/jquery.js"></script>
@@ -32,7 +32,7 @@
     </head>
     
 <header> 
-<nav><table><tr><div id=bandeau><td><a href="Acceuil.php">Acceuil</a></td>    <td><a href="Offre.php">Offres</a></td>     <td><a href="Demande.html">Demandes</a></td>       <td><a href="Profil.html">Mon Profil</a></td></div></tr></table></nav>
+<nav><div id=bandeau><ul><li><a href="Acceuil.php">Acceuil</a></li>   <li><a href="Offre.php">Offres</a></li>     <li><a href="Demande.html">Demandes</a></li>      <li><a href="Profil.html">Mon Profil</a></li></ul></div></nav>
 </header>
     <br><br><br><br><br>
     <body>
