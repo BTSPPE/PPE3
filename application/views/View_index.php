@@ -25,7 +25,7 @@
 <input type="submit" value="Connexion"><br/>            
 <input type="submit" value="Inscription"/><br/><br/>
 <input type="submit" value="Retour"/>
-
+ 
 </form>
     
 </body>
