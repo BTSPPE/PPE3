@@ -1,5 +1,5 @@
 <?php
-class Model_demandesAcceuil extends CI_Model
+class model_demandesAcceuil extends CI_Model
 {
     public function GetAllDemande()
     {

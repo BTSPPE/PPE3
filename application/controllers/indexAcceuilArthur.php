@@ -1,19 +1,20 @@
 <?php
 
-class Home_PPE3 extends CI_controller
+class indexAcceuilArthur extends CI_controller
 {
-
     public function index()
     {
-        $this->load->model("model_offresAcceuil")
-        $offres['LesOffres'] = $this->model_PPE3->getAllOffre($_GET['idUser']);
-        $this->load->view("view_offresAcceuil", $offres);
+        $this->load->model("model_demandesAcceuil");
+        $data['LesDemandes']=$this->model_demandesAcceuil->GetAllDemande();
+        $this->load->view("view_AcceuilArthur.php", $data);
     }
-    public function Demandes()
+
+    public function offres()
     {
-        $this->load->model("model_demandesAcceuil")
-        $demandes['LesDemandes']=$this->model_PPE3->getAllDemande($_GET['idUser']);
-        $this->load->view("view_demandesAcceuil.php", $demandes)
+        $this->load->model("model_offresAcceuil");
+        $offres['LesOffres'] = $this->model_offresAcceuil->GetAllOffres();
+        $this->load->view("view_AcceuilArthur.php", $offres);
     }
+
 }
 ?>

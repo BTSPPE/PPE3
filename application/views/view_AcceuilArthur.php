@@ -34,10 +34,25 @@
 <header> 
 <nav><table><tr><div id=bandeau><td><a href="Acceuil.html">Acceuil</a></td>    <td><a href="#offres">Offres</a></td>     <td><a href="#demandes">Demandes</a></td>       <td><a href="Profil.html">Mon Profil</a></td></div></tr></table></nav>
 </header>
-    <br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br>
     <body>
-        <main><div id=offres><h3>Les offres du moment</h3><p></p>
-    <div id=demandes><h3>Les demandes du moment</h3><p></p>
+        <main><h3>Les demandes du moment</h3>
+    <div id=demandes>
+    <?php
+               foreach ($LesDemandes as $uneDemande)
+               {
+                     echo $uneDemande->nomService .'  '. $uneDemande->descriptionDemande.'  '. $uneDemande->dateDemande. "<br>";
+               }
+    ?>    
+    <p></p><br><br><br><br>
+    <div id=offres><h3>Les offres du moment</h3>
+    <?php 
+    foreach ($LesOffres as $uneoffre)
+    {
+          echo $uneOffre->nomService .'  '. $uneOffre->descriptionOffre.'  '. $uneOffre->dateOffre. "<br>";
+    }
+    ?>
+    <p></p>
     </body>
     <br><br><br><br><br>
     <footer>
