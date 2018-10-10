@@ -29,6 +29,21 @@
         });
 
     </script>
+
+    <script>
+    $
+        (
+            function()
+            {
+                $(echo[id=offres])
+                (
+                    function()
+                    {
+                        GetAllOffres($(this).val());
+                    }
+                )
+            }
+        );</script>
     </head>
     
 <header> 
@@ -46,12 +61,7 @@
     ?>    
     <p></p><br><br><br><br>
     <div id=offres><h3>Les offres du moment</h3>
-    <?php 
-    foreach ($LesOffres as $uneoffre)
-    {
-          echo $uneOffre->nomService .'  '. $uneOffre->descriptionOffre.'  '. $uneOffre->dateOffre. "<br>";
-    }
-    ?>
+
     <p></p>
     </body>
     <br><br><br><br><br>

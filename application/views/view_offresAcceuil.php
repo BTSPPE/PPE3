@@ -9,4 +9,10 @@
     <script src="JQuery/jquery-3.1.1.js"></script> 
 </head>
 <body>
+<?php 
+                foreach ($LesOffres as $uneOffre)
+                {
+                      echo $uneOffre->nomService .'  '. $uneOffre->descriptionOffre.'  '. $uneOffre->dateOffre. "<br>";
+                }
+    ?>
 </body>
