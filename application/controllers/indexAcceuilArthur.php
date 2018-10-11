@@ -9,11 +9,11 @@ class indexAcceuilArthur extends CI_controller
         $this->load->view("view_AcceuilArthur.php", $data);
     }
 
-    public function offres()
+    public function GetAllOffres()
     {
         $this->load->model("model_offresAcceuil");
-        $offres['LesOffres'] = $this->model_offresAcceuil->GetAllOffres();
-        $this->load->view("view_AcceuilArthur.php", $offres);
+        $data['LesOffres']=$this->model_offresAcceuil->GetAllOffres();
+        $this->load->view("view_offresAcceuil.php", $data);
     }
 
 }

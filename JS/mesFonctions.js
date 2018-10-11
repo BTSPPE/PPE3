@@ -1,4 +1,4 @@
-function AfficherLesOffres()
+function GetAllOffres()
 {
 
 $.ajax
@@ -6,11 +6,10 @@ $.ajax
     {
         type:"get",
         url:"index.php/indexAcceuilArthur/GetAllOffres",
-        data:"idSect="+idSecteur,
         success:function(data)
         {
             $("#offres").empty();
-            $("#offres").append(offres);
+            $("#offres").append(data);
         },
         error:function()
         {

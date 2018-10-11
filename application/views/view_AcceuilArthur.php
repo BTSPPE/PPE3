@@ -5,8 +5,7 @@
         <link rel="stylesheet" href="Bootstrap/css/Bootstrap.css" />
         <link href="https://fonts.googleapis.com/css?family=Bellefair|Open+Sans:400,400i,600i,700" rel="stylesheet">
         <script src="JS/mesFonctions.js"></script>  
-    <script type="text/javascript" src="jquery/jquery.js"></script>
-
+    <script type="text/javascript" src="jquery/jquery-3.1.1.js"></script>
      <script type="text/javascript">
             $(document).ready(function(){
                 $("body").css("display","none");
@@ -30,20 +29,17 @@
 
     </script>
 
-    <script>
+   <script>
     $
         (
             function()
             {
-                $(echo[id=offres])
-                (
-                    function()
-                    {
-                        GetAllOffres($(this).val());
-                    }
-                )
+               
+                GetAllOffres();
+                
             }
-        );</script>
+        );
+        </script>
     </head>
     
 <header> 
@@ -60,8 +56,8 @@
                }
     ?>    
     <p></p><br><br><br><br>
-    <div id=offres><h3>Les offres du moment</h3>
-
+    <h3>Les offres du moment</h3>
+    <div id=offres>
     <p></p>
     </body>
     <br><br><br><br><br>
