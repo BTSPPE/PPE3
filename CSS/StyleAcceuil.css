@@ -1,0 +1,11 @@
+#bandeau {
+    background-color: red;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.align {
+    text-align: center;
+    flex: auto;
+}

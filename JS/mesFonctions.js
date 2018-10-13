@@ -18,3 +18,7 @@ $.ajax
     }
 );
 }
+
+function AjoutOffre(){
+
+}

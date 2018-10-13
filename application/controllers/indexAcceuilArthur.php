@@ -16,5 +16,10 @@ class indexAcceuilArthur extends CI_controller
         $this->load->view("view_offresAcceuil.php", $data);
     }
 
+    public function AjoutDemande(){
+        $this->load->model("Model_AjoutDemande");
+        $data['AjoutD']= $this->model_AjoutDemande->AjoutDemande();
+        $this->load->view("View_AjoutDemande.php", $data);
+    }
 }
 ?>

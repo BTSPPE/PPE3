@@ -2,11 +2,12 @@
 <html>
     <head> <meta charset="utf-8">
         <title>Acceuil</title>
-        <link rel="stylesheet" href="Bootstrap/css/Bootstrap.css" />
-        <link href="https://fonts.googleapis.com/css?family=Bellefair|Open+Sans:400,400i,600i,700" rel="stylesheet">
-        <script src="JS/mesFonctions.js"></script>  
+            <link rel="stylesheet" href="Bootstrap/css/bootstrap.css" />
+            <link rel="stylesheet" href="CSS/StyleAcceuil.css" />
+            <link href="https://fonts.googleapis.com/css?family=Bellefair|Open+Sans:400,400i,600i,700" rel="stylesheet">  
     <script type="text/javascript" src="jquery/jquery-3.1.1.js"></script>
-     <script type="text/javascript">
+    <script src="JS/mesFonctions.js"></script>
+    <script type="text/javascript">
             $(document).ready(function(){
                 $("body").css("display","none");
             });
@@ -29,37 +30,53 @@
 
     </script>
 
-   <script>
-    $
-        (
-            function()
-            {
-               
-                GetAllOffres();
-                
-            }
-        );
-        </script>
+    <script>
+        $(document).ready(function() {
+            GetAllOffres();
+        });
+        $("#ajoutdemande").click(AjoutDemande)  
+    </script>
     </head>
-    
-<header> 
-<nav><table><tr><div id=bandeau><td><a href="Acceuil.html">Acceuil</a></td>    <td><a href="#offres">Offres</a></td>     <td><a href="#demandes">Demandes</a></td>       <td><a href="Profil.html">Mon Profil</a></td></div></tr></table></nav>
-</header>
+<body>  
+    <header> 
+        <nav>
+            <div id="bandeau">
+                    <div class="align">
+                        <a href="Acceuil.html">Acceuil</a>
+                    </div>
+                    <div class="align">
+                        <a href="#offres">Offres</a>
+                    </div>
+                    <div class="align">
+                        <a href="#demandes">Demandes</a>
+                    </div>
+                    <div class="align">
+                        <a href="Profil.html">Mon Profil</a>
+                    </div>
+            </div>
+        </nav>
+    </header>
     <br><br><br><br><br><br>
-    <body>
-        <main><h3>Les demandes du moment</h3>
-    <div id=demandes>
-    <?php
+    
+    <main>
+        <h3>Les demandes du moment</h3>
+        <button id= "ajoutdemande" type= "button">COUCOU</button>
+        <div id=demandes>
+            <?php
                foreach ($LesDemandes as $uneDemande)
                {
                      echo $uneDemande->nomService .'  '. $uneDemande->descriptionDemande.'  '. $uneDemande->dateDemande. "<br>";
                }
-    ?>    
-    <p></p><br><br><br><br>
-    <h3>Les offres du moment</h3>
-    <div id=offres>
-    <p></p>
-    </body>
-    <br><br><br><br><br>
+            ?>    
+        </div>    
+        <br><br><br><br>
+        <h3>Les offres du moment</h3>
+        <div id=offres>
+        </div>
+        <br><br><br><br><br>
+    </main>
     <footer>
-    Mentions légales bla bla bla bla</footer>
+    Mentions légales bla bla bla bla
+    </footer>
+
+    </body>
