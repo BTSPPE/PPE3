@@ -19,6 +19,6 @@ $.ajax
 );
 }
 
-function AjoutOffre(){
+function AjoutDemande(){
 
 }
