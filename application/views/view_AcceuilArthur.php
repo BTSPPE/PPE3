@@ -4,8 +4,7 @@
         <title>Acceuil</title>
             <link rel="stylesheet" href="Bootstrap/css/bootstrap.css" />
             <link rel="stylesheet" href="CSS/StyleAcceuil.css" />
-            <link href="https://fonts.googleapis.com/css?family=Bellefair|Open+Sans:400,400i,600i,700" rel="stylesheet">  
-    <script type="text/javascript" src="jquery/jquery-3.1.1.js"></script>
+    <script type="text/javascript" src="JQuery/jquery-3.1.1.js"></script>
     <script src="JS/mesFonctions.js"></script>
     <script type="text/javascript">
             $(document).ready(function(){
@@ -42,7 +41,7 @@
         <nav>
             <div id="bandeau">
                     <div class="align">
-                        <a href="Acceuil.html">Acceuil</a>
+                        <a href="view_AcceuilArthur.php">Acceuil</a>
                     </div>
                     <div class="align">
                         <a href="#offres">Offres</a>
@@ -53,6 +52,12 @@
                     <div class="align">
                         <a href="Profil.html">Mon Profil</a>
                     </div>
+                    <div class="align">
+                        <button id="connexion">Se connecter</a>
+                    </div>
+                    <div class="align">
+                        <button id="inscription">S'inscrire</a>
+                    </div>
             </div>
         </nav>
     </header>
@@ -60,17 +65,24 @@
     
     <main>
         <h3>Les demandes du moment</h3>
-        <button id= "ajoutdemande" type= "button">COUCOU</button>
+        <button id="ajoutdemande" type= "button">Ajouter une demande</button><br><br>
         <div id=demandes>
             <?php
                foreach ($LesDemandes as $uneDemande)
                {
-                     echo $uneDemande->nomService .'  '. $uneDemande->descriptionDemande.'  '. $uneDemande->dateDemande. "<br>";
+            ?>
+                <span class="boite">
+                    <?php
+                     echo $uneDemande->nomService .'  '. $uneDemande->descriptionDemande.'  '. $uneDemande->dateDemande. "</span><br>";
+                    ?>
+                
+            <?php
                }
             ?>    
         </div>    
         <br><br><br><br>
         <h3>Les offres du moment</h3>
+        <button id="ajoutoffre" type= "button">Ajouter une offre</button>
         <div id=offres>
         </div>
         <br><br><br><br><br>

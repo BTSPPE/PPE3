@@ -9,3 +9,26 @@
     text-align: center;
     flex: auto;
 }
+
+.boite{
+    border : solid;
+    margin-left : 33%;
+    margin-right : 33%;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    /* flex-wrap: wrap; */
+    max-width: auto;
+}
+
+body{
+    background-color:black;
+
+}
+
+main{
+    background-color: grey;
+    margin-left: 12%;
+    margin-right: 13%;
+    text-align: center;
+}

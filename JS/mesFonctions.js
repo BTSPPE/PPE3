@@ -21,4 +21,21 @@ $.ajax
 
 function AjoutDemande(){
 
+    $.ajax
+(
+    {
+        type:"get",
+        url:"index.php/indexAcceuilArthur/AjoutuneDemande",
+        success:function(data)
+        {
+            $("#ajoutdemande").empty();
+            $("#ajoutdemande").append(data);
+        },
+        error:function()
+        {
+            alert("Ereur d'affichage sur le popup d'ajout");
+        }
+    }
+);
+
 }
