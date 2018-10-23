@@ -19,13 +19,14 @@ $.ajax
 );
 }
 
-function AjoutDemande(){
+function boutondemande()
+{
 
     $.ajax
 (
     {
         type:"get",
-        url:"index.php/indexAcceuilArthur/AjoutuneDemande",
+        url:"index.php/indexAcceuilArthur/BoutonDemande",
         success:function(data)
         {
             $("#ajoutdemande").empty();
@@ -39,3 +40,4 @@ function AjoutDemande(){
 );
 
 }
+

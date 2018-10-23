@@ -10,15 +10,15 @@
     flex: auto;
 }
 
+#demandes,#offres{
+    display:flex;
+    flex-flow:row wrap;
+}
 .boite{
     border : solid;
-    margin-left : 33%;
-    margin-right : 33%;
-    display: flex;
-    justify-content: center;
-    flex-flow: row wrap;
-    /* flex-wrap: wrap; */
-    max-width: auto;
+    background-color: white;
+    width: 18%;
+    margin: 5px;
 }
 
 body{
