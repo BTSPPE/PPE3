@@ -34,7 +34,29 @@ function boutondemande()
         },
         error:function()
         {
-            alert("Ereur d'affichage sur le popup d'ajout");
+            alert("Ereur d'affichage sur le popup d'ajout de demande");
+        }
+    }
+);
+
+}
+
+function boutonoffre()
+{
+
+    $.ajax
+(
+    {
+        type:"get",
+        url:"index.php/indexAcceuilArthur/BoutonOffre",
+        success:function(data)
+        {
+            $("#ajoutoffre").empty();
+            $("#ajoutoffre").append(data);
+        },
+        error:function()
+        {
+            alert("Ereur d'affichage sur le popup d'ajout d'offre");
         }
     }
 );

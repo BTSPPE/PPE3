@@ -31,13 +31,16 @@
         });
 
     </script>
-
+    <script>
+        $(document).ready(function() {
+            boutonoffre();
+         });
+    </script>
     <script>
         $(document).ready(function() {
             GetAllOffres();
             boutondemande();
         });
-        // $("#ajoutdemande").click(AjoutDemande)  
     </script>
     </head>
 <body>
@@ -70,7 +73,7 @@
     
     <main>
         <h3>Les demandes du moment</h3>
-        <button type="button" onclick="'boutondemande'" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+        <button type="button" onclick="'boutondemande'" class="btn btn-primary" data-toggle="modal" data-target="#popupdemande">
   Ajouter une demande
 </button>
 <div id="ajoutdemande">
@@ -88,7 +91,11 @@
         </div>    
         <br><br><br><br>
         <h3>Les offres du moment</h3>
-        <button id="ajoutoffre" type= "button">Ajouter une offre</button>
+        <button type="button" onclick="'boutonoffre'" class="btn btn-primary" data-toggle="modal" data-target="#popupoffre">
+            Ajouter une Offre
+        </button>
+        <div id="ajoutoffre">
+        </div>
         <div id=offres>
         </div>
         <br><br><br><br><br>

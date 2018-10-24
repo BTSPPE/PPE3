@@ -1,5 +1,4 @@
-
-<div class="modal fade" id="popupdemande" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="popupoffre" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -11,11 +10,11 @@
       <div class="modal-body">
       <form>
   <div class="form-group">
-    <label for="numdemande">Numéro de la demande</label>
+    <label for="numdemande">Numéro de l'offre'</label>
     <input type="textarea" class="form-control" id="numdemande" placeholder="">
   </div>
   <div class="form-group">
-    <label for="selectdemande">De quoi avez-vous besoin ?</label>
+    <label for="selectdemande">Que proposez-vous ?</label>
     <select class="form-control" id="selectdemande">
         <?php
             foreach ($lesOptions as $uneOption)
@@ -36,7 +35,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="submit" class="btn btn-primary">Enregistrer votre demande</button>
+        <button type="submit" class="btn btn-primary">Enregistrer votre offre</button>
       </div>
     </div>
   </div>
