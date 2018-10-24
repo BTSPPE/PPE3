@@ -35,6 +35,7 @@
     <script>
         $(document).ready(function() {
             GetAllOffres();
+            boutondemande();
         });
         // $("#ajoutdemande").click(AjoutDemande)  
     </script>
@@ -69,67 +70,21 @@
     
     <main>
         <h3>Les demandes du moment</h3>
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+        <button type="button" onclick="'boutondemande'" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
   Ajouter une demande
 </button>
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-      <form>
-  <div class="form-group">
-    <label for="exampleFormControlInput1">Email address</label>
-    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-  </div>
-  <div class="form-group">
-    <label for="exampleFormControlSelect1">Example select</label>
-    <select class="form-control" id="exampleFormControlSelect1">
-    </select>
-  </div>
-  <div class="form-group">
-    <label for="exampleFormControlSelect2">Example multiple select</label>
-    <select multiple class="form-control" id="exampleFormControlSelect2">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
-    </select>
-  </div>
-  <div class="form-group">
-    <label for="exampleFormControlTextarea1">Example textarea</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-  </div>
-</form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="submit" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
+<div id="ajoutdemande">
 </div>
         <div id=demandes>
             <?php
-               foreach ($LesDemandes as $uneDemande)
+               foreach ($lesDemandes as $uneDemande)
                {
             ?>
                 <div class="boite">
                     <?php
                      echo $uneDemande->nomService .'<br>'. $uneDemande->descriptionDemande.'<br>'. $uneDemande->dateDemande. "</div><br>";
-                    ?>
-                
-            <?php
                }
-            ?>    
+                    ?>    
         </div>    
         <br><br><br><br>
         <h3>Les offres du moment</h3>

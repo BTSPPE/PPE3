@@ -1,5 +1,5 @@
 <?php 
-                foreach ($LesOffres as $uneOffre)
+                foreach ($lesOffres as $uneOffre)
                 {
 ?>
     <div class="boite">
