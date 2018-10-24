@@ -12,7 +12,7 @@
       <form>
   <div class="form-group">
     <label for="numdemande">Numéro de la demande</label>
-    <input type="textarea" class="form-control" id="numdemande" placeholder="">
+    <input type="textarea" name="numDemande"class="form-control" id="numdemande" placeholder="<?php echo $idDemande[0]->maxdemande + 1?>">
   </div>
   <div class="form-group">
     <label for="selectdemande">De quoi avez-vous besoin ?</label>
@@ -21,7 +21,7 @@
             foreach ($lesOptions as $uneOption)
             {
         ?>
-                <option name="nomDemande" value="17" ><?php echo $uneOption->nomService ; ?>
+                <option name="nomDemande" value='""' ><?php echo $uneOption->nomService ; ?></option>
         <?php
             }
         ?>

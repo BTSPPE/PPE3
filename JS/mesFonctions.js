@@ -34,7 +34,7 @@ function boutondemande()
         },
         error:function()
         {
-            alert("Ereur d'affichage sur le popup d'ajout de demande");
+            alert("Erreur d'affichage sur le popup d'ajout de demande");
         }
     }
 );
@@ -56,7 +56,7 @@ function boutonoffre()
         },
         error:function()
         {
-            alert("Ereur d'affichage sur le popup d'ajout d'offre");
+            alert("Erreur d'affichage sur le popup d'ajout d'offre");
         }
     }
 );

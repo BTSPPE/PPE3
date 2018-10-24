@@ -11,7 +11,7 @@
       <form action="Model_AjoutOffre.php" method="post">
   <div class="form-group">
     <label for="numoffre">Numéro de l'offre'</label>
-    <input type="textarea" name="numOffre" class="form-control" id="numoffre" placeholder="">
+    <input type="textarea" name="numOffre" class="form-control" id="numoffre" placeholder="<?php echo $idOffre[0]->maxId + 1?>">
   </div>
   <div class="form-group">
     <label for="selectoffre">Que proposez-vous ?</label>

@@ -5,11 +5,11 @@
             <link rel="stylesheet" href="Bootstrap/css/bootstrap.css" />
             <link rel="stylesheet" href="CSS/StyleAcceuil.css" />
             <link rel="stylesheet" href="JQuery/jquery-ui.css" />
-    <script type="text/javascript" src="JQuery/jquery-3.1.1.js"></script>
-    <script type="text/javascript" src="JQuery/jquery-ui.js"></script>
-    <script type="text/javascript" src="Bootstrap/js/bootstrap.bundle.js"></script>
-    <script src="JS/mesFonctions.js"></script>
-    <script type="text/javascript">
+        <script type="text/javascript" src="JQuery/jquery-3.1.1.js"></script>
+        <script type="text/javascript" src="JQuery/jquery-ui.js"></script>
+        <script type="text/javascript" src="Bootstrap/js/bootstrap.bundle.js"></script>
+        <script src="JS/mesFonctions.js"></script>
+        <!-- <script type="text/javascript">
             $(document).ready(function(){
                 $("body").css("display","none");
             });
@@ -30,21 +30,10 @@
             }
         });
 
-    </script>
-    <script>
-        $(document).ready(function() {
-            boutonoffre();
-         });
-    </script>
-    <script>
-        $(document).ready(function() {
-            GetAllOffres();
-            boutondemande();
-        });
-    </script>
+    </script> -->
+    
     </head>
 <body>
-
     <header> 
         <nav>
             <div id="bandeau">
@@ -91,8 +80,8 @@
         </div>    
         <br><br><br><br>
         <h3>Les offres du moment</h3>
-        <button type="button" onclick="'boutonoffre'" class="btn btn-primary" data-toggle="modal" data-target="#popupoffre">
-            Ajouter une Offre
+        <button type="button" value=' Ajouter une Offre' onclick="'boutonoffre'" class="btn btn-primary" data-toggle="modal" data-target="#popupoffre">
+        Ajoutez une offre
         </button>
         <div id="ajoutoffre">
         </div>
@@ -107,5 +96,12 @@
         $('#myModal').on('shown.bs.modal', function () {
         $('#myInput').trigger('focus')
         })
+    </script>
+    <script>
+        $(document).ready(function() {
+            GetAllOffres();
+            boutondemande();
+            boutonoffre();
+         });
     </script>
     </body>
