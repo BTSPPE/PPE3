@@ -10,9 +10,11 @@
 </head>
 <body>
     <h1>Inscription</h1><br>
-    <label>Nom</label> <input type="text" id="txtNom"><br><br>
-    <label>Login</label> <input type="text" id="txtLogin"><br><br>
-    <label>Mot de passe</label> <input type="password" id="txtMdp"><br><br>
-    <input type="button" value="S'inscrire"  onclick='Ajoutinscription()'>
-</body>
+    <?php
+    echo   "<label>Nom</label> <input type='text' id='txtNom'><br><br>
+    <label>Login</label> <input type='text' id='txtLogin'><br><br>
+    <label>Mot de passe</label> <input type='password' id='txtMdp'><br><br>
+    <input type='button' value='Créer un compte' onclick='Ajoutinscription()'>"
+    ?>
+    </body>
 </html>
