@@ -10,11 +10,8 @@ class Index_inscription extends CI_Controller
 
     public function AjoutInscription()
     {
-        $nom = $_GET['nom'];
-        $login = $_GET['login'];
-        $mdp = $_GET['mdp'];
         $this->load->model('Model_inscription');
-        $data['Inscriptions']=$this->Model_inscription->Insertinscription($nom,$login,$mdp);
+        $data['Inscriptions']=$this->Model_inscription->Insertinscription($_GET['nomUser'],$_GET['login'],$_GET['mdp']);
     }
 }
 
