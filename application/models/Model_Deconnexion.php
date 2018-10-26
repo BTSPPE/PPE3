@@ -6,5 +6,4 @@ class Model_Deconnexion extends CI_Model
         $this->session->isLogged = false;
     }
 }
-
 ?>

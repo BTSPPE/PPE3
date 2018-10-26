@@ -5,7 +5,8 @@
     <body>
     a que coucou bob
     <?php
-        echo $this->session->isLogged ? "true" : "false";
+        print_r($lesbug);
+        print_r($this->session);
     ?>
     </body>
 </html>

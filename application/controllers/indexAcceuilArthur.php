@@ -46,13 +46,21 @@
         redirect(''); //redirection vers index
     }
 
-    public function Connexion(){
+    public function Deconnexion(){
         $this->load->library("session");
         $this->load->model("Model_Deconnexion");
-        $this->Model_Connexion->Deconnexion();
+        $this->Model_Deconnexion->Deconnexion();
         redirect(''); //redirection vers index
     }
 
+    public function profil(){
+        $this->load->library("session");
+        $this->load->model("Model_PDemande");
+        $data['lesDemandes']=$this->Model_PDemande->GetAllInfosDemande();
+        $this->load->model("Model_POffres");
+        $data['lesOffres']=$this->Model_POffres->GetAllInfosOffre();
+        $this->load->view("view_Profil", $data);
+    }
 }
 
 ?>
