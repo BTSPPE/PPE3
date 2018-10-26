@@ -21,7 +21,6 @@ $.ajax
 
 function boutondemande()
 {
-
     $.ajax
 (
     {
@@ -31,6 +30,7 @@ function boutondemande()
         {
             $("#ajoutdemande").empty();
             $("#ajoutdemande").append(data);
+            $("#popupdemande").modal();
         },
         error:function()
         {
@@ -43,7 +43,6 @@ function boutondemande()
 
 function boutonoffre()
 {
-
     $.ajax
 (
     {
@@ -53,6 +52,7 @@ function boutonoffre()
         {
             $("#ajoutoffre").empty();
             $("#ajoutoffre").append(data);
+            $("#popupoffre").modal();
         },
         error:function()
         {
@@ -62,4 +62,50 @@ function boutonoffre()
 );
 
 }
+
+function boutonconnexion()
+{
+    $.ajax
+(
+    {
+        type:"get",
+        url:"index.php/indexAcceuilArthur/BoutonConnexion",
+        success:function(data)
+        {
+            $("#popconnexion").empty();
+            $("#popconnexion").append(data);
+            $("#popupconnexion").modal();
+        },
+        error:function()
+        {
+            alert("Erreur d'affichage sur le popup de connexion");
+        }
+    }
+);
+
+}
+
+// function boutonconnexion()
+// {
+//     $.ajax
+// (
+//     {
+//         type:"get",
+//         url:"index.php/indexAcceuilArthur/BoutonDeconnexion",
+//         success:function(data)
+//         {
+//             $("#popconnexion").empty();
+//             $("#popconnexion").append(data);
+//             $("#popupconnexion").modal();
+//         },
+//         error:function()
+//         {
+//             alert("Erreur d'affichage sur le popup de connexion");
+//         }
+//     }
+// );
+
+// }
+
+
 

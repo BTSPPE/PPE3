@@ -2,7 +2,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="popupoffre">Ajoutez votre demande</h5>
+        <h5 class="modal-title" id="popupoffre">Ajoutez votre Offre</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -11,7 +11,7 @@
       <form action="Model_AjoutOffre.php" method="post">
   <div class="form-group">
     <label for="numoffre">Numéro de l'offre'</label>
-    <input type="textarea" name="numOffre" class="form-control" id="numoffre" placeholder="<?php echo $idOffre[0]->maxId + 1?>">
+    <input type="text" name="numOffre" class="form-control" id="numoffre" placeholder="<?php echo $idOffre[0]->maxId + 1?>">
   </div>
   <div class="form-group">
     <label for="selectoffre">Que proposez-vous ?</label>
@@ -20,7 +20,7 @@
             foreach ($lesOptions as $uneOption)
             {
         ?>
-                <option name="nomOffre" value="17" ><?php echo $uneOption->nomService ; ?>
+                <option name="nomOffre" value="<?php echo $idOffre[0]->maxId + 1?>" ><?php echo $uneOption->nomService ; ?>
         <?php
             }
         ?>

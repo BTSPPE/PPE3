@@ -46,15 +46,32 @@
                     <div class="align">
                         <a href="#demandes">Demandes</a>
                     </div>
+                    <?php
+                    if ($this->session->isLogged==false)
+                    {?>
                     <div class="align">
                         <a href="Profil.html">Mon Profil</a>
                     </div>
                     <div class="align">
-                        <button id="connexion">Se connecter</a>
+                   
+                    <button type="button" class="btn btn-primary" id="connexion">Connexion</button>
+                    <div id="popconnexion"></div>
                     </div>
+                    
                     <div class="align">
-                        <button id="inscription">S'inscrire</a>
+                        <button id="inscription">S'inscrire</button>
                     </div>
+                    <?php
+                    }
+                    else {
+                        ?>
+                        <div class="align">
+                    <button type="button" class="btn btn-primary" id="Mon_profil">Mon profil</button></div>
+                        <div class="align">
+                    <button type="button" class="btn btn-primary" id="deconnexion">Déconnexion</button></div>
+                        <?php
+                    }
+                    ?>
             </div>
         </nav>
     </header>
@@ -62,7 +79,7 @@
     
     <main>
         <h3>Les demandes du moment</h3>
-        <button type="button" onclick="'boutondemande'" class="btn btn-primary" data-toggle="modal" data-target="#popupdemande">
+        <button type="button" class="btn btn-primary" id="buttondemande">
   Ajouter une demande
 </button>
 <div id="ajoutdemande">
@@ -80,7 +97,7 @@
         </div>    
         <br><br><br><br>
         <h3>Les offres du moment</h3>
-        <button type="button" value=' Ajouter une Offre' onclick="'boutonoffre'" class="btn btn-primary" data-toggle="modal" data-target="#popupoffre">
+        <button type="button" class="btn btn-primary" id="buttonoffre">
         Ajoutez une offre
         </button>
         <div id="ajoutoffre">
@@ -100,8 +117,11 @@
     <script>
         $(document).ready(function() {
             GetAllOffres();
-            boutondemande();
-            boutonoffre();
+            $("#buttondemande").click(boutondemande); 
+            $("#buttonoffre").click(boutonoffre);
+            $("#connexion").click(boutonconnexion);
+            $("#deconnexion").click(function() {window.location.replace('/ingetis/PPE3-1/deconnexion')});
+            // $("Mon_profil")
          });
     </script>
     </body>
