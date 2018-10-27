@@ -54,11 +54,15 @@
     
     <main>
         <h3>Les demandes du moment</h3>
-        <button type="button" class="btn btn-primary" id="buttondemande">
-  Ajouter une demande
-</button>
-<div id="ajoutdemande">
-</div>
+        <?php
+        if ($this->session->isLogged==true)
+        {
+        echo "<button type='button' class='btn btn-primary' id='buttondemande'>
+            Ajouter une demande
+            </button>
+            <div id='ajoutdemande'>
+            </div>";
+        }?>
         <div id=demandes>
             <?php
                foreach ($lesDemandes as $uneDemande)
@@ -72,11 +76,15 @@
         </div>    
         <br><br><br><br>
         <h3>Les offres du moment</h3>
-        <button type="button" class="btn btn-primary" id="buttonoffre">
-        Ajoutez une offre
-        </button>
-        <div id="ajoutoffre">
-        </div>
+        <?php
+        if ($this->session->isLogged==true)
+        {
+        echo "<button type='button' class='btn btn-primary' id='buttonoffre'>
+            Ajoutez une offre
+            </button>
+            <div id='ajoutoffre'>
+            </div>";
+        }?>
         <div id=offres>
         </div>
         <br><br><br><br><br>
@@ -95,8 +103,8 @@
             $("#buttondemande").click(boutondemande); 
             $("#buttonoffre").click(boutonoffre);
             $("#connexion").click(boutonconnexion);
-            $("#deconnexion").click(function() {window.location.replace('index.php/indexAcceuilArthur/Deconnexion')});
-            $("#Mon_profil").click(function() {window.location.replace('index.php/indexAcceuilArthur/profil')});
+            $("#deconnexion").click(function() {window.location.assign('index.php/indexAcceuilArthur/Deconnexion')});
+            $("#Mon_profil").click(function() {window.location.assign('index.php/indexAcceuilArthur/profil')});
             // $("Mon_profil")
          });
     </script>

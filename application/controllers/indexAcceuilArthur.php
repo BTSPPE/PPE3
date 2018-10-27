@@ -61,6 +61,11 @@
         $data['lesOffres']=$this->Model_POffres->GetAllInfosOffre();
         $this->load->view("view_Profil", $data);
     }
+
+    public function retouracceuil(){
+        $this->load->library("session");
+        redirect('');
+    }
 }
 
 ?>

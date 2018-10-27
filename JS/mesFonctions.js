@@ -85,27 +85,4 @@ function boutonconnexion()
 
 }
 
-// function boutonconnexion()
-// {
-//     $.ajax
-// (
-//     {
-//         type:"get",
-//         url:"index.php/indexAcceuilArthur/BoutonDeconnexion",
-//         success:function(data)
-//         {
-//             $("#popconnexion").empty();
-//             $("#popconnexion").append(data);
-//             $("#popupconnexion").modal();
-//         },
-//         error:function()
-//         {
-//             alert("Erreur d'affichage sur le popup de connexion");
-//         }
-//     }
-// );
-
-// }
-
-
 

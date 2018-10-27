@@ -10,7 +10,7 @@
       <div class="modal-body">
       <form action="Model_AjoutOffre.php" method="post">
   <div class="form-group">
-    <label for="numoffre">Numéro de l'offre'</label>
+    <label for="numoffre">Numéro de l'offre</label>
     <input type="text" name="numOffre" class="form-control" id="numoffre" placeholder="<?php echo $idOffre[0]->maxId + 1?>">
   </div>
   <div class="form-group">
