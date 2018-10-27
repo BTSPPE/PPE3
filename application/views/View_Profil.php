@@ -45,6 +45,7 @@
     </header>
     <br><br><br><br><br><br>
     <main>
+    <h3>Mes demandes</h3>
     <?php
      foreach ($lesDemandes as $uneDemande)
      {
@@ -54,10 +55,18 @@
            echo $uneDemande->nomService .'<br>'. $uneDemande->descriptionDemande.'<br>'. $uneDemande->dateDemande. "</div><br>";
      }
           ?>    
-
+    <h3>Mes Offres</h3>
+    <?php
+     foreach ($lesOffres as $uneOffre)
+     {
+  ?>
+      <div class="boite">
+          <?php
+           echo $uneOffre->nomService .'<br>'. $uneOffre->descriptionOffre.'<br>'. $uneOffre->dateOffre. "</div><br>";
+     }
+          ?>    
     </main>
      <script>
-        
         $(document).ready(function() {
             $("#deconnexion").click(function() {window.location.assign('Deconnexion')});
             $("#Acceuil").click(function() {window.location.assign('http://localhost/ingetis/PPE3-1/index.php')});
