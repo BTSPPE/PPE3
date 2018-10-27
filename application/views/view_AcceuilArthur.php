@@ -105,7 +105,6 @@
             $("#connexion").click(boutonconnexion);
             $("#deconnexion").click(function() {window.location.assign('index.php/indexAcceuilArthur/Deconnexion')});
             $("#Mon_profil").click(function() {window.location.assign('index.php/indexAcceuilArthur/profil')});
-            // $("Mon_profil")
          });
     </script>
     </body>
