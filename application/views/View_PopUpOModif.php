@@ -2,7 +2,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="popupoffre">Ajoutez votre Offre</h5>
+        <h5 class="modal-title" id="popupoffre">Modifier votre Offre</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -35,7 +35,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button onclick="ajoutoffre(event)" class="btn btn-primary">Enregistrer votre offre</button>
+        <button onclick="ajoutoffre(event)" class="btn btn-primary">Enregistrer votre modification d'offre</button>
       </div>
     </div>
   </div>

@@ -50,7 +50,7 @@
         $this->load->library("session");
         $this->load->model("Model_Deconnexion");
         $this->Model_Deconnexion->Deconnexion();
-        redirect(''); //redirection vers index
+        redirect('');
     }
 
     public function profil(){
@@ -65,6 +65,36 @@
     public function retouracceuil(){
         $this->load->library("session");
         redirect('');
+    }
+
+    public function PopUpDModification(){
+        $this->load->library("session");
+        $this->load->model("Model_PopUp");
+        $data['lesOptions']= $this->Model_PopUp->GetPopUp();
+        $this->load->model("Model_idDemande");
+        $data['idOffre']=$this->Model_idOffre->GetOffres();
+        $this->load->view("View_PopUpDModif", $data);
+    }
+
+    public function PopUpOModification(){
+        $this->load->library("session");
+        $this->load->model("Model_PopUp");
+        $data['lesOptions']= $this->Model_PopUp->GetPopUp();
+        $this->load->model("Model_idOffre");
+        $data['idOffre']=$this->Model_idOffre->GetOffres();
+        $this->load->view("View_PopUpOModif", $data);
+    }
+
+    public function AjoutDemande(){
+        $this->load->library("session");
+        $this->load->model("Model_AjoutDemande");
+        $data['lesAjouts']=$this->Model_AjoutDemande->AjoutDemande();
+    }
+
+    public function AjoutOffre(){
+        $this->load->library("session");
+        $this->load->model("Model_AjoutOffre");
+        $data['lesAjouts']=$this->Model_AjoutOffre->AjoutOffre();
     }
 }
 

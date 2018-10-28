@@ -1,9 +1,8 @@
-
 <div class="modal fade" id="popupdemande" tabindex="-1" role="dialog" aria-labelledby="popupdemande" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="popupdemande">Ajoutez votre demande</h5>
+        <h5 class="modal-title" id="popupdemande">Modifiez votre demande</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -36,7 +35,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button onclick="ajoutDemande(event)" class="btn btn-primary">Enregistrer votre demande</button>
+        <button onclick="ajoutDemande(event)" class="btn btn-primary">Enregistrer votre modification demande</button>
       </div>
     </div>
   </div>
