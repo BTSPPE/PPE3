@@ -8,6 +8,13 @@ class Ctrl_Home extends CI_Controller
 
         $this->load->view('View_Index',$data);
     }
+    public function Connexion()
+    {
+        $this->load->model('Model_Connexion');
+        $data['lesConnexions']= $this->Model_Connexion->AfficherConnexion();
+
+        $this->load->view('View_connexion',$data);
+    }
 }
 
 

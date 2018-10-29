@@ -24,7 +24,7 @@ if (isset($_POST['FormInscription']))
        {
            
            $erreur="votre compte a bien été crée";
-           //header('Location: Connexion.php');     Permet de renvoyer l'utilisateur a la page de connexion apres inscriptions
+           header('Location: View_connexion.php');    
        }
     }
     else
