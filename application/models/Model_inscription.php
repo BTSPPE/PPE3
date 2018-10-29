@@ -1,19 +1,26 @@
 <?php
-
-class Model_inscription extends CI_Model
+class Model_Inscription extends CI_Model
 {
-    public function GetAllInscription()
+  function EnregistrementMembres()
     {
-        $sql = $this->db->query('INSERT INTO user (nomUser, login, mdp)
-        VALUES ('.$_POST['nomUser'].', '.$_POST['login'].', ' .$_POST['passe'].')');
+        
+        // global $bdd;
 
-        return $sql->result();
-
+        // $req=$bdd->prepare('INSERT INTO user(nomUser,mdp,login) VALUE(:nomUser, :mdp, :login)');
+        // $req->execute(array(
+        //     'nomUser'=>$nomUtilisateurs,
+        //     'mdp'=>$mdp,
+        //     'login'=>$login));
+        // $req->closeCursor();
+        // $sql = $this->db->query('INSERT INTO user (nomUser, login, mdp)
+        //                          VALUES ('.$nomUtilisateurs.','.$login.','.$passe.') ');
+        // return $sql-> result();
     }
-
-
-
 }
+
+
+
+
 
 
 
