@@ -82,13 +82,13 @@
             var i = 0;
             while(i < boites.length) {
                 console.log(boites[i])
-                boites[0].addEventListener("click", popupmodificationoffre)
+                boites[i].addEventListener("click", popupmodificationoffre)
                 i++;
             }
             var boiteD = $(".boiteDemande")
             var j = 0;
             while(j < boiteD.length){
-                boiteD[0].addEventListener("click", popupmodificationoffre)
+                boiteD[j].addEventListener("click", popupmodificationdemande)
                 j++;  
             }
          });

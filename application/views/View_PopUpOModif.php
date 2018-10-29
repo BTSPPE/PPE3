@@ -35,7 +35,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button onclick="ajoutoffre(event)" class="btn btn-primary">Enregistrer votre modification d'offre</button>
+        <button onclick="modifoffre(event)" class="btn btn-primary">Enregistrer votre modification d'offre</button>
       </div>
     </div>
   </div>

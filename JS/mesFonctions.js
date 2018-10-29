@@ -84,6 +84,38 @@ function boutonconnexion()
 );
 }
 
+function ajoutDemande(event) {
+    var typeDemande = $("#selectdemande")[0].value;
+    var descDemande = $("#descriptiondemande")[0].value;
+    $.ajax({
+        type: "post",
+        url: "index.php/indexAcceuilArthur/AjoutDemande",
+        data: {
+            idService: typeDemande,
+            descDemande: descDemande
+        },
+        success:function(alertdemande){
+            alert("Succès de l'ajout de votre demande");
+        }
+    })
+}
+
+    function ajoutoffre(event) {
+        var typeOffre = $("#selectoffre")[0].value;
+        var descOffre = $("#descriptionoffre")[0].value;
+        $.ajax({
+            type: "post",
+            url: "index.php/indexAcceuilArthur/AjoutOffre",
+            data: {
+                idService: typeOffre,
+                descOffre: descOffre
+            },
+            success:function(alertoffre){
+                alert("Succès de l'ajout de votre offre");
+            }
+        })
+}
+
 function popupmodificationdemande()
 {
     $.ajax
@@ -124,36 +156,4 @@ function popupmodificationoffre()
         }
     }
 );
-}
-
-function ajoutDemande(event) {
-    var typeDemande = $("#selectdemande")[0].value;
-    var descDemande = $("#descriptiondemande")[0].value;
-    $.ajax({
-        type: "post",
-        url: "index.php/indexAcceuilArthur/AjoutDemande",
-        data: {
-            idService: typeDemande,
-            descDemande: descDemande
-        },
-        success:function(alertdemande){
-            alert("Succès de l'ajout de votre demande");
-        }
-    })
-}
-
-    function ajoutoffre(event) {
-        var typeOffre = $("#selectoffre")[0].value;
-        var descOffre = $("#descriptionoffre")[0].value;
-        $.ajax({
-            type: "post",
-            url: "index.php/indexAcceuilArthur/AjoutOffre",
-            data: {
-                idService: typeOffre,
-                descOffre: descOffre
-            },
-            success:function(alertoffre){
-                alert("Succès de l'ajout de votre offre");
-            }
-        })
 }

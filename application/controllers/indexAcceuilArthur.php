@@ -67,6 +67,18 @@
         redirect('');
     }
 
+    public function AjoutDemande(){
+        $this->load->library("session");
+        $this->load->model("Model_AjoutDemande");
+        $data['lesAjouts']=$this->Model_AjoutDemande->AjoutDemande();
+    }
+
+    public function AjoutOffre(){
+        $this->load->library("session");
+        $this->load->model("Model_AjoutOffre");
+        $data['lesAjouts']=$this->Model_AjoutOffre->AjoutOffre();
+    }
+
     public function PopUpDModification(){
         $this->load->library("session");
         $this->load->model("Model_PopUp");
@@ -83,18 +95,6 @@
         $this->load->model("Model_idOffre");
         $data['idOffre']=$this->Model_idOffre->GetOffres();
         $this->load->view("View_PopUpOModif", $data);
-    }
-
-    public function AjoutDemande(){
-        $this->load->library("session");
-        $this->load->model("Model_AjoutDemande");
-        $data['lesAjouts']=$this->Model_AjoutDemande->AjoutDemande();
-    }
-
-    public function AjoutOffre(){
-        $this->load->library("session");
-        $this->load->model("Model_AjoutOffre");
-        $data['lesAjouts']=$this->Model_AjoutOffre->AjoutOffre();
     }
 }
 

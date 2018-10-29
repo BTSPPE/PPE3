@@ -15,10 +15,10 @@
     flex-flow:row wrap;
 }
 
-#Pdemandes,#Poffres{
+/* #Pdemandes,#Poffres{
     display:flex;
     flex-flow:row wrap;
-}
+} */
 
 .boite{
     border : solid;
@@ -29,7 +29,6 @@
 
 body{
     background-color:black;
-
 }
 
 main{
