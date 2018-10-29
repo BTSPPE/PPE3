@@ -53,7 +53,7 @@
   ?>
     <div class="boiteDemande">
         <?php
-           echo '<p>'.$uneDemande->nomService .'</p><br><p>'. $uneDemande->descriptionDemande.'</p><br><p>'. $uneDemande->dateDemande. "</p></div><br>";
+           echo "<p>".$uneDemande->nomService ."</p><br><p>". $uneDemande->descriptionDemande."</p><br><p>". $uneDemande->dateDemande. "</p><p class='invisible'>".$uneDemande->idDemande."</p></div><br>";
     }
         ?>
     </div>
@@ -66,7 +66,7 @@
   ?>
     <div class="boiteOffre">
         <?php
-           echo '<p>'.$uneOffre->nomService.'</p><br><p>'. $uneOffre->descriptionOffre.'</p><br><p>'. $uneOffre->dateOffre. "</p></div><br>";
+           echo '<p>'.$uneOffre->nomService.'</p><br><p>'. $uneOffre->descriptionOffre.'</p><br><p>'. $uneOffre->dateOffre. "</p><p class='invisible'>".$uneOffre->idOffre."</p></div><br>";
     }
         ?>
     </div>
@@ -81,7 +81,6 @@
             var boites = $(".boiteOffre")
             var i = 0;
             while(i < boites.length) {
-                console.log(boites[i])
                 boites[i].addEventListener("click", popupmodificationoffre)
                 i++;
             }

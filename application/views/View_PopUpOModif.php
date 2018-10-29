@@ -8,7 +8,7 @@
         </button>
       </div>
       <div class="modal-body">
-      <form action="Model_AjoutOffre.php" method="post">
+      <form>
   <div class="form-group">
     <label for="numoffre">Numéro de l'offre</label>
     <input type="text" name="numOffre" class="form-control" id="numoffre" placeholder="<?php echo $idOffre[0]->maxId + 1?>">
@@ -20,7 +20,7 @@
             foreach ($lesOptions as $uneOption)
             {
         ?>
-                <option name="nomOffre" value="<?php echo $idOffre[0]->maxId + 1?>" ><?php echo $uneOption->nomService ; ?>
+                <option name="nomOffre" value="<?php echo $uneOption->idService?>" ><?php echo $uneOption->nomService ; ?>
         <?php
             }
         ?>
