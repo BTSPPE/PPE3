@@ -6,7 +6,7 @@ function Ajoutinscription()
             type:"get",
             url:"index.php/Index_Inscription/Ajoutinscription",
             data:"nomUser="+$('#txtNom').val()+"&login="+$('#txtLogin').val()+"&mdp="+$('#txtMdp').val(),
-            success:function()
+            success:function(data)
             {
                 alert("L'inscription a été prise en compte.");
                 AjoutInscription();
