@@ -16,7 +16,7 @@
     echo "<label>Nom</label> <input type='text' id='txtNom'><br><br>";
     echo "<label>Login</label> <input type='text' id='txtLogin'><br><br>";
     echo "<label>Mot de passe</label> <input type='password' id='txtMdp'><br><br>";
-    echo "<input type='button' id='boutoniscription' value='Créer un compte' onclick='Ajoutinscription()'>"
+    echo "<input type='button' id='boutoninscription' value='Créer un compte' onclick='Ajoutinscription()'>"
     ?>
     </p>
     </body>
