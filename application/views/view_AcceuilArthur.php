@@ -8,7 +8,7 @@
         <script type="text/javascript" src="JQuery/jquery-3.1.1.js"></script>
         <script type="text/javascript" src="JQuery/jquery-ui.js"></script>
         <script type="text/javascript" src="Bootstrap/js/bootstrap.bundle.js"></script>
-        <script src="JS/MesFonctions.js"></script>    
+        <script src="JS/lesFonctions.js"></script>    
     </head>
 <body>
     <header> 
@@ -90,7 +90,7 @@
         <br><br><br><br><br>
     </main>
     <footer>
-    Mentions légales bla bla bla
+    Mentions légales bla bla bla bla
     </footer>
     <script>
         $('#myModal').on('shown.bs.modal', function () {
