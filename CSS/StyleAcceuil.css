@@ -10,10 +10,12 @@
     flex: auto;
 }
 
-#demandes,#offres{
+#demandes ,#offres {
     display:flex;
     flex-flow:row wrap;
+    justify-content: center;
 }
+
 .boite{
     border : solid;
     background-color: white;
@@ -23,7 +25,6 @@
 
 body{
     background-color:black;
-
 }
 
 main{
@@ -31,4 +32,11 @@ main{
     margin-left: 12%;
     margin-right: 13%;
     text-align: center;
+}
+
+.boiteOffre, .boiteDemande{
+    border : solid;
+    background-color: white;
+    width: 18%;
+    margin: 5px;
 }

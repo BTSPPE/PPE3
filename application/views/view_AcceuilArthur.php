@@ -5,42 +5,12 @@
             <link rel="stylesheet" href="Bootstrap/css/bootstrap.css" />
             <link rel="stylesheet" href="CSS/StyleAcceuil.css" />
             <link rel="stylesheet" href="JQuery/jquery-ui.css" />
-    <script type="text/javascript" src="JQuery/jquery-3.1.1.js"></script>
-    <script type="text/javascript" src="JQuery/jquery-ui.js"></script>
-    <script type="text/javascript" src="Bootstrap/js/bootstrap.bundle.js"></script>
-    <script src="JS/mesFonctions.js"></script>
-    <script type="text/javascript">
-            $(document).ready(function(){
-                $("body").css("display","none");
-            });
-        </script>
-
-    <script type="text/javascript">
-        $(document).ready(function(){
-            $("body").css("display", "none");
-            $("body").fadeIn(2000);
-            $("a.transition").click(function(event){
-                event.preventDefault();
-                linkLocation = this.href;
-                $("body").fadeOut(1000, redirectPage);
-            });
-
-            function redirectPage(){
-                window.location = linkLocation;
-            }
-        });
-
-    </script>
-
-    <script>
-        $(document).ready(function() {
-            GetAllOffres();
-        });
-        // $("#ajoutdemande").click(AjoutDemande)  
-    </script>
+        <script type="text/javascript" src="JQuery/jquery-3.1.1.js"></script>
+        <script type="text/javascript" src="JQuery/jquery-ui.js"></script>
+        <script type="text/javascript" src="Bootstrap/js/bootstrap.bundle.js"></script>
+        <script src="JS/mesFonctions.js"></script>    
     </head>
 <body>
-
     <header> 
         <nav>
             <div id="bandeau">
@@ -53,15 +23,30 @@
                     <div class="align">
                         <a href="#demandes">Demandes</a>
                     </div>
+                    <?php
+                    if ($this->session->isLogged==false)
+                    {?>
                     <div class="align">
-                        <a href="Profil.html">Mon Profil</a>
+                    <button type="button" class="btn btn-primary" id="connexion">Connexion</button>
+                    <div id="popconnexion"></div>
                     </div>
+                    
                     <div class="align">
-                        <button id="connexion">Se connecter</a>
+                    <button type="button" class="btn btn-primary" id="inscription">Inscription</button>
+                    <div id="popinscription"></div>
                     </div>
-                    <div class="align">
-                        <button id="inscription">S'inscrire</a>
-                    </div>
+                    <?php
+                    }
+                    else {
+                        echo "<div class='align'>".$this->session->nomUser."</div><div class='align'> "."<img src='".$this->session->photoUser."' height='38'></div>";
+                        ?>
+                        <div class="align">
+                    <button type="button" class="btn btn-primary" id="Mon_profil">Mon profil</button></div>
+                        <div class="align">
+                    <button type="button" class="btn btn-primary" id="deconnexion">Déconnexion</button></div>
+                        <?php
+                    }
+                    ?>
             </div>
         </nav>
     </header>
@@ -69,71 +54,37 @@
     
     <main>
         <h3>Les demandes du moment</h3>
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-  Ajouter une demande
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-      <form>
-  <div class="form-group">
-    <label for="exampleFormControlInput1">Email address</label>
-    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-  </div>
-  <div class="form-group">
-    <label for="exampleFormControlSelect1">Example select</label>
-    <select class="form-control" id="exampleFormControlSelect1">
-    </select>
-  </div>
-  <div class="form-group">
-    <label for="exampleFormControlSelect2">Example multiple select</label>
-    <select multiple class="form-control" id="exampleFormControlSelect2">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
-    </select>
-  </div>
-  <div class="form-group">
-    <label for="exampleFormControlTextarea1">Example textarea</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-  </div>
-</form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="submit" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
+        <?php
+        if ($this->session->isLogged==true)
+        {
+        echo "<button type='button' class='btn btn-primary' id='buttondemande'>
+            Ajouter une demande
+            </button>
+            <div id='ajoutdemande'>
+            </div>";
+        }?>
         <div id=demandes>
             <?php
-               foreach ($LesDemandes as $uneDemande)
+               foreach ($lesDemandes as $uneDemande)
                {
             ?>
                 <div class="boite">
                     <?php
                      echo $uneDemande->nomService .'<br>'. $uneDemande->descriptionDemande.'<br>'. $uneDemande->dateDemande. "</div><br>";
-                    ?>
-                
-            <?php
                }
-            ?>    
+                    ?>    
         </div>    
         <br><br><br><br>
         <h3>Les offres du moment</h3>
-        <button id="ajoutoffre" type= "button">Ajouter une offre</button>
+        <?php
+        if ($this->session->isLogged==true)
+        {
+        echo "<button type='button' class='btn btn-primary' id='buttonoffre'>
+            Ajoutez une offre
+            </button>
+            <div id='ajoutoffre'>
+            </div>";
+        }?>
         <div id=offres>
         </div>
         <br><br><br><br><br>
@@ -145,5 +96,16 @@
         $('#myModal').on('shown.bs.modal', function () {
         $('#myInput').trigger('focus')
         })
+    </script>
+    <script>
+        $(document).ready(function() {
+            GetAllOffres();
+            $("#buttondemande").click(boutondemande); 
+            $("#buttonoffre").click(boutonoffre);
+            $("#connexion").click(boutonconnexion);
+            $("#inscription").click(function() {window.location.assign('http://localhost/ingetis/PPE3/')});
+            $("#deconnexion").click(function() {window.location.assign('index.php/indexAcceuilArthur/Deconnexion')});
+            $("#Mon_profil").click(function() {window.location.assign('index.php/indexAcceuilArthur/profil')});
+         });
     </script>
     </body>
