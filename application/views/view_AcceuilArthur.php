@@ -90,7 +90,7 @@
         <br><br><br><br><br>
     </main>
     <footer>
-    Mentions légales bla bla bla bla
+    Mentions légales bla bla bla
     </footer>
     <script>
         $('#myModal').on('shown.bs.modal', function () {
