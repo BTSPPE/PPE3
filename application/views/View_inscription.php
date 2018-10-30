@@ -19,12 +19,5 @@
     echo "<input type='button' id='boutoninscription' value='Créer un compte' onclick='Ajoutinscription()'>"
     ?>
     </p>
-
-    <script>
-        $(document).ready(function() {
-            GetAllOffres();
-            $("#boutonacceuil").click(retouracceuil); 
-         });
-    </script>
     </body>
 </html>

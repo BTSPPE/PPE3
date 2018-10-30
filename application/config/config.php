@@ -23,11 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-<<<<<<< HEAD
-$config['base_url'] = 'http://localhost/ingetis/PPE3-1';
-=======
 $config['base_url'] = 'http://localhost/ingetis/PPE3';
->>>>>>> 535c1466593c0542f0286915c921aa1e55715c8f
 
 /*
 |--------------------------------------------------------------------------
