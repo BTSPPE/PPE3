@@ -8,7 +8,7 @@
         <script type="text/javascript" src="JQuery/jquery-3.1.1.js"></script>
         <script type="text/javascript" src="JQuery/jquery-ui.js"></script>
         <script type="text/javascript" src="Bootstrap/js/bootstrap.bundle.js"></script>
-        <script src="JS/mesFonctions.js"></script>    
+        <script src="JS/MesFonctions.js"></script>    
     </head>
 <body>
     <header> 
