@@ -46,6 +46,7 @@
     <br><br><br><br><br><br>
     <main>
     <h3>Mes demandes</h3>
+    Cliquez pour modifier
     <div id="demandes">
     <?php
      foreach ($lesDemandes as $uneDemande)
@@ -53,12 +54,13 @@
   ?>
     <div class="boiteDemande">
         <?php
-           echo "<p>".$uneDemande->nomService ."</p><br><p>". $uneDemande->descriptionDemande."</p><br><p>". $uneDemande->dateDemande. "</p><p class='invisible'>".$uneDemande->idDemande."</p></div><br>";
+           echo "<p>".$uneDemande->nomService ."</p><br><p>". $uneDemande->descriptionDemande."</p><br><p>". $uneDemande->dateDemande. "</p><p class='invisible'>".$uneDemande->idDemande."</p></div>";
     }
         ?>
     </div>
     <div id=popDmodification></div> 
     <h3>Mes Offres</h3>
+    Cliquez pour modifier
     <div id="offres">
     <?php
      foreach ($lesOffres as $uneOffre)
@@ -66,7 +68,7 @@
   ?>
     <div class="boiteOffre">
         <?php
-           echo '<p>'.$uneOffre->nomService.'</p><br><p>'. $uneOffre->descriptionOffre.'</p><br><p>'. $uneOffre->dateOffre. "</p><p class='invisible'>".$uneOffre->idOffre."</p></div><br>";
+           echo '<p>'.$uneOffre->nomService.'</p><br><p>'. $uneOffre->descriptionOffre.'</p><br><p>'. $uneOffre->dateOffre. "</p><p class='invisible'>".$uneOffre->idOffre."</p></div>";
     }
         ?>
     </div>

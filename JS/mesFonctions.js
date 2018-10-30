@@ -201,12 +201,12 @@ function popupmodificationoffre(event)
 var idcliquerO;
 var idcliquerD;
 
-function modifDemande(event) {
+function modifdemande(event) {
     var typeDemande = $("#selectdemande")[0].value;
     var descDemande = $("#descriptiondemande")[0].value;
     $.ajax({
         type: "post",
-        url: "index.php/indexAcceuilArthur/ModifDemande",
+        url: "/ingetis/PPE3-1/index.php/indexAcceuilArthur/ModifDemande",
         data: {
             idService: typeDemande,
             descDemande: descDemande,
@@ -223,7 +223,7 @@ function modifoffre(event) {
     var descOffre = $("#descriptionoffre")[0].value;
     $.ajax({
         type: "post",
-        url: "index.php/indexAcceuilArthur/ModifOffre",
+        url: "/ingetis/PPE3-1/index.php/indexAcceuilArthur/ModifOffre",
         data: {
             idService: typeOffre,
             descOffre: descOffre,

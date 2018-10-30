@@ -1,5 +1,5 @@
 <?php
-class Model_AjoutDemande extends CI_Model
+class Model_ModifDemande extends CI_Model
 {
     public function ModifierDemande()
     {

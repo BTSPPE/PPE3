@@ -10,10 +10,6 @@
       <div class="modal-body">
       <form>
   <div class="form-group">
-    <label for="numdemande">Numéro de la demande</label>
-    <input type="textarea" name="numDemande"class="form-control" id="numdemande" value="<?php echo $idDemande[0]->maxdemande + 1?>" placeholder="<?php echo $idDemande[0]->maxdemande + 1?>">
-  </div>
-  <div class="form-group">
     <label for="selectdemande">De quoi avez-vous besoin ?</label>
     <select class="form-control" id="selectdemande">
         <?php

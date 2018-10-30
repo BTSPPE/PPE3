@@ -13,12 +13,8 @@
 #demandes ,#offres {
     display:flex;
     flex-flow:row wrap;
+    justify-content: center;
 }
-
-/* #Pdemandes,#Poffres{
-    display:flex;
-    flex-flow:row wrap;
-} */
 
 .boite{
     border : solid;
