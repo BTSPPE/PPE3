@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,12 +12,10 @@
     <body>
         <h1>Inscription</h1><br>
         <p>
-            <?php
-                echo "<label>Nom</label> <input type='text' id='txtNom'><br><br>";
-                echo "<label>Login</label> <input type='text' id='txtLogin'><br><br>";
-                echo "<label>Mot de passe</label> <input type='password' id='txtMdp'><br><br>";
-                echo "<input type='button' id='boutoninscription' value='Créer un compte' onclick='Ajoutinscription()'>"
-            ?>
+            <label>Nom</label> <input type='text' id='txtNom'><br><br>
+            <label>Login</label> <input type='text' id='txtLogin'><br><br>
+            <label>Mot de passe</label> <input type='password' id='txtMdp'><br><br>
+            <input type='button' id='boutoninscription' value='Créer un compte' onclick='Ajoutinscription()'>
         </p>
     </body>
 </html>
