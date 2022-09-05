@@ -12,6 +12,10 @@
     <body>
         <h1>Inscription</h1><br>
         <p>
+            on
+            re
+            test
+            encore
             <label>Nom</label> <input type='text' id='txtNom'><br><br>
             <label>Login</label> <input type='text' id='txtLogin'><br><br>
             <label>Mot de passe</label> <input type='password' id='txtMdp'><br><br>
